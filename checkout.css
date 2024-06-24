@@ -1,0 +1,195 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    font-family: 'Times New Roman', serif;
+    color: #ff523b;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    height: 50px;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.checkout {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-family: 'Times New Roman', serif;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-method {
+    margin-bottom: 20px;
+}
+
+.payment-method .radio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.payment-method .radio input[type="radio"] {
+    display: none;
+}
+
+.payment-method .radio input[type="radio"] + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Times New Roman', serif;
+    color: #333;
+}
+
+.payment-method .radio input[type="radio"] + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.payment-method .radio input[type="radio"]:checked + label:before {
+    border-color: #ff523b;
+    background-color: #ff523b;
+}
+
+.payment-method .radio input[type="radio"]:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.payment-method .radio input[type="radio"]:focus + label:before {
+    outline: none;
+    border-color: #ff523b;
+}
+
+.checkbox-group {
+    margin-top: 10px;
+}
+
+.checkbox-group label {
+    display: block;
+    font-size: 16px;
+    font-family: 'Times New Roman', serif;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff523b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: #e14a31;
+}
+
+.order-summary {
+    background-color: #fafafa;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h2 {
+    color: #ff523b;
+    margin-bottom: 15px;
+}
+
+.order-summary p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.order-summary .final-amount {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #ff523b;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .checkout, .order-summary {
+        padding: 20px;
+    }
+    .btn-primary {
+        font-size: 16px;
+    }
+}
